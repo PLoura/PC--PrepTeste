@@ -44,7 +44,7 @@ class UnaryCapacityStream<T> {
 
     suspend fun read(index: Int): Pair<Int, T> {
         guard.lock()
-//se atinge valos >= não suspende
+        //se atinge valos >= não suspende
         if (currentIndex >= index) {
             guard.unlock()
             return Pair(currentIndex, currentValue!!)
