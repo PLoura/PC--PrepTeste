@@ -66,5 +66,6 @@ class CyclicCountDownLatchBatch (val initialCount: Int) {
         sharedRequest = null
         currentBatch?.let {it.signalled = true} //sinalizar todas threads
         condition.signalAll()
+
     }
 }

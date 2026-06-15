@@ -61,6 +61,7 @@ class CyclicCountDownLatch(val initialCount: Int) {
         while (waiting.isNotEmpty()) {
             waiting.removeFirst().signalled = true
         }
+        condition.signalAll()
     }
 
 }

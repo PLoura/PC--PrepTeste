@@ -25,7 +25,7 @@ class CyclicCountDownLatchCycles (val initialCount: Int) {
         guard.withLock {
             if (--count == 0) {
                 count = initialCount
-               // signallAllWaitingThreads()
+                signallAllWaitingThreads()
                 return true
             }
 
