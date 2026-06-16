@@ -37,9 +37,7 @@ class CyclicCountDownLatchCycles (val initialCount: Int) {
             while (true) {
                 remaining = condition.awaitNanos(remaining)
 
-                if (cycleCount > myCycle) {
-                    return true
-                }
+
 
                 if (remaining <= 0) {
                     return false
